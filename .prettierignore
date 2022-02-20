@@ -1,0 +1,4 @@
+# .prettierignore
+/node_moudules
+/dist
+.package.json

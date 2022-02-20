@@ -1,0 +1,57 @@
+{
+  "name": "vue3_vite2_ts",
+  "private": true,
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite --host",
+    "build:dev": "vue-tsc --noEmit --skipLibCheck&& vite build --mode devlopment ",
+    "build:prod": "vue-tsc --noEmit --skipLibCheck&& vite build --mode production ",
+    "preview": "vite preview",
+    "lint": "eslint src",
+    "lint:fix": "eslint src --fix --ext .ts,.tsx",
+    "lint:prettier": "check-prettier lint",
+    "lint:style": "stylelint --fix \"src/**/*.{less,css,scss,sass,vue}\" --syntax less",
+    "prettier": "prettier -c .prettierrc.js --write \"**/*.{js,css,less,scss,ts,json,vue,tsx}\""
+  },
+  "dependencies": {
+    "axios": "^0.26.0",
+    "nprogress": "^0.2.0",
+    "pinia": "^2.0.0-rc.10",
+    "vue": "^3.2.25",
+    "vue-router": "^4.0.8"
+  },
+  "devDependencies": {
+    "@types/axios": "^0.14.0",
+    "@types/node": "^17.0.18",
+    "@types/nprogress": "^0.2.0",
+    "@typescript-eslint/eslint-plugin": "^5.12.0",
+    "@typescript-eslint/parser": "^5.12.0",
+    "@vitejs/plugin-vue": "^2.2.0",
+    "eslint": "^8.9.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-vue": "^8.4.1",
+    "husky": "^7.0.4",
+    "lint-staged": "^12.3.4",
+    "prettier": "^2.5.1",
+    "sass": "^1.49.8",
+    "stylelint": "^14.5.1",
+    "typescript": "^4.5.4",
+    "vite": "^2.8.0",
+    "vue-tsc": "^0.29.8"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,jsx,css,less,scss,json,md}": [
+      "prettier --write",
+      "git add"
+    ],
+    "**/*.less": "stylelint --syntax less",
+    "**/*.scss": "stylelint --syntax scss",
+    "**/*.{js,jsx}": "npm run lint-staged:js"
+  }
+}
