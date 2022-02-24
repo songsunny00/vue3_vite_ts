@@ -2,7 +2,7 @@
  * @Author: songsunny
  * @Date: 2022-02-16 17:10:54
  * @LastEditors: songsunny
- * @LastEditTime: 2022-02-19 16:48:55
+ * @LastEditTime: 2022-02-22 16:51:37
  * @Description: prettier配置-专注代码格式规范
  * @remark:参考链接https://www.jianshu.com/p/18999f6e1668
  */
@@ -18,9 +18,9 @@ module.exports = {
   trailingComma: 'none', // 函数最后不需要逗号
   jsxBracketSameLine: false, // 在jsx中把'>' 单独放一行
   jsxSingleQuote: false, // 在jsx中使用单引号代替双引号
-  arrowParens: 'always', // (x) => {} 箭头函数参数只有一个时是否要有小括号。avoid：省略括号；always：总是需要
+  arrowParens: 'avoid', // (x) => {} 箭头函数参数只有一个时是否要有小括号。avoid：省略括号；always：总是需要
   insertPragma: false, // 自当插入pragma到已经完成的format的文件开头
   proseWrap: 'never', // "<always|never|preserve>" 文章换行,默认情况下会对你的markdown文件换行进行format会控制在printwidth以内
-  endOfLine: 'lf', // "<lf|crlf|cr|auto>" 行尾换行符,默认是lf,
+  endOfLine: 'auto', // "<lf|crlf|cr|auto>" 行尾换行符,默认是lf,
   htmlWhitespaceSensitivity: 'strict' //"<css|strict|ignore>" html中的空格敏感性
 }

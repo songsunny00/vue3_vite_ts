@@ -9,36 +9,36 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
 
 const routes: RouteRecordRaw[] = [
-    {
-        path: '/',
-        redirect: '/login'
+  {
+    path: '/',
+    redirect: '/login'
+  },
+  {
+    path: '/login',
+    name: 'login',
+    meta: {
+      title: '登录'
     },
-    {
-        path: '/login',
-        name: 'login',
-        meta: {
-            title: '登录'
-        },
-        component: () => import('@/pages/login/index.vue'),
+    component: () => import('@/pages/login/index.vue')
+  },
+  {
+    path: '/home',
+    name: 'home',
+    meta: {
+      title: '首页'
     },
-    {
-        path: '/home',
-        name: 'home',
-        meta: {
-            title: '首页'
-        },
-        component: () => import('@/pages/home/index.vue'),
-    },
-    {
-        path: '/:pathMatch(.*)*',
-        name: '404',
-        component: () => import('@/pages/error/404.vue')
-    }
+    component: () => import('@/pages/home/index.vue')
+  },
+  {
+    path: '/:pathMatch(.*)*',
+    name: '404',
+    component: () => import('@/pages/error/404.vue')
+  }
 ]
 
 const router = createRouter({
-    history: createWebHistory(),
-    routes,
+  history: createWebHistory(),
+  routes
 })
 
 export default router

@@ -7,5 +7,5 @@
  * @Github: https://github.com/songsunny00
 -->
 <template>
-    <h1>首页</h1>
+  <h1>首页</h1>
 </template>

@@ -6,14 +6,12 @@
  * @Description:
  * @Github: https://github.com/songsunny00
  */
-import { resolve } from "path"
+import { resolve } from 'path'
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 
 export default defineConfig({
-  plugins: [
-    vue()
-  ],
+  plugins: [vue()],
   base: './', //打包路径
   server: {
     port: 8001,
@@ -23,8 +21,8 @@ export default defineConfig({
   resolve: {
     // 配置别名--__dirname 找不到 需要 yarn add @types/node --save-dev
     alias: {
-      "@": resolve(__dirname, "src"),
-    },
+      '@': resolve(__dirname, 'src')
+    }
   },
   css: {
     preprocessorOptions: {
@@ -32,5 +30,5 @@ export default defineConfig({
         additionalData: '@import "@/style/variables.scss";'
       }
     }
-  },
+  }
 })

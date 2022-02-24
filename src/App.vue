@@ -11,19 +11,19 @@
 </template>
 
 <script setup lang="ts">
-//import.meta.env.VITE_APP_WEB_URL
+  //import.meta.env.VITE_APP_WEB_URL
 </script>
 
 <style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-.test {
-  color: $test-color;
-}
+  #app {
+    font-family: Avenir, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+    color: #2c3e50;
+    margin-top: 60px;
+  }
+  .test {
+    color: $test-color;
+  }
 </style>
