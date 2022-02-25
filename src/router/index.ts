@@ -2,7 +2,7 @@
  * @Author: songsunny
  * @Date: 2022-02-20 13:05:32
  * @LastEditors: songsunny
- * @LastEditTime: 2022-02-20 13:56:27
+ * @LastEditTime: 2022-02-25 11:04:42
  * @Description: 路由配置
  * @Github: https://github.com/songsunny00
  */
@@ -21,6 +21,11 @@ const routes: RouteRecordRaw[] = [
     },
     component: () => import('@/pages/login/index.vue')
   },
+  // {
+  //   path: '/react',
+  //   name: 'ReactMicroApp',
+  //   redirect: '/react'
+  // },
   {
     path: '/home',
     name: 'home',
@@ -30,10 +35,15 @@ const routes: RouteRecordRaw[] = [
     component: () => import('@/pages/home/index.vue')
   },
   {
-    path: '/:pathMatch(.*)*',
+    path: '/404',
     name: '404',
     component: () => import('@/pages/error/404.vue')
   }
+  // {
+  //   path: '/:pathMatch(.*)*',
+  //   name: '404',
+  //   component: () => import('@/pages/error/404.vue')
+  // }
 ]
 
 const router = createRouter({

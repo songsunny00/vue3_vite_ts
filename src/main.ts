@@ -2,7 +2,7 @@
  * @Author: songsunny
  * @Date: 2022-02-17 17:13:23
  * @LastEditors: songsunny
- * @LastEditTime: 2022-02-20 20:03:20
+ * @LastEditTime: 2022-02-25 14:58:36
  * @Description:
  * @Github: https://github.com/songsunny00
  */
@@ -16,4 +16,4 @@ const app = createApp(App)
 app.use(router)
 app.use(piniaStore)
 
-app.mount('#app')
+app.mount('#main-app')
