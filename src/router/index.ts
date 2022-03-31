@@ -2,7 +2,7 @@
  * @Author: songsunny
  * @Date: 2022-02-20 13:05:32
  * @LastEditors: songsunny
- * @LastEditTime: 2022-02-20 13:56:27
+ * @LastEditTime: 2022-02-27 21:44:06
  * @Description: 路由配置
  * @Github: https://github.com/songsunny00
  */
@@ -37,6 +37,8 @@ const routes: RouteRecordRaw[] = [
 ]
 
 const router = createRouter({
+    // 运行在主应用中时，添加路由命名空间 /vue
+    base: window.__POWERED_BY_QIANKUN__ ? "/vue" : "/",
     history: createWebHistory(),
     routes,
 })
